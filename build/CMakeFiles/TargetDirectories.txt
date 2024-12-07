@@ -1,0 +1,3 @@
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles/Chip8Emu.dir
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles/edit_cache.dir
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles/rebuild_cache.dir
