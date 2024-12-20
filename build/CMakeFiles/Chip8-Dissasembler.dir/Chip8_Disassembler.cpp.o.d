@@ -1,6 +1,6 @@
-CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o: \
- /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Chip8_Disassembler.cpp \
- /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/includes.h \
+CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: \
+ /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp \
+ /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/includes.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/iostream \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++config.h \

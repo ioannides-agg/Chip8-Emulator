@@ -1,8 +1,8 @@
 [
 {
   "directory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o -c /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Chip8_Disassembler.cpp",
-  "file": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Chip8_Disassembler.cpp",
-  "output": "CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o"
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o -c /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp",
+  "file": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp",
+  "output": "CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o"
 }
 ]

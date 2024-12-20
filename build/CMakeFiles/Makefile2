@@ -54,7 +54,7 @@ RM = /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8
+CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build
@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Chip8Emu.dir/all
+all: CMakeFiles/Chip8-Dissasembler.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Chip8Emu.dir/clean
+clean: CMakeFiles/Chip8-Dissasembler.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Chip8Emu.dir
+# Target rules for target CMakeFiles/Chip8-Dissasembler.dir
 
 # All Build rule for target.
-CMakeFiles/Chip8Emu.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles --progress-num=1,2 "Built target Chip8Emu"
-.PHONY : CMakeFiles/Chip8Emu.dir/all
+CMakeFiles/Chip8-Dissasembler.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles --progress-num=1,2 "Built target Chip8-Dissasembler"
+.PHONY : CMakeFiles/Chip8-Dissasembler.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Chip8Emu.dir/rule: cmake_check_build_system
+CMakeFiles/Chip8-Dissasembler.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Chip8Emu.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Chip8-Dissasembler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles 0
-.PHONY : CMakeFiles/Chip8Emu.dir/rule
+.PHONY : CMakeFiles/Chip8-Dissasembler.dir/rule
 
 # Convenience name for target.
-Chip8Emu: CMakeFiles/Chip8Emu.dir/rule
-.PHONY : Chip8Emu
+Chip8-Dissasembler: CMakeFiles/Chip8-Dissasembler.dir/rule
+.PHONY : Chip8-Dissasembler
 
 # clean rule for target.
-CMakeFiles/Chip8Emu.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/clean
-.PHONY : CMakeFiles/Chip8Emu.dir/clean
+CMakeFiles/Chip8-Dissasembler.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/clean
+.PHONY : CMakeFiles/Chip8-Dissasembler.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

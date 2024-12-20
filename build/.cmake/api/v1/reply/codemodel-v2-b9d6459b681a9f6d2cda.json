@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Chip8Emu",
+					"name" : "Chip8-Emulator",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Chip8Emu::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Chip8Emu-Debug-49c9be5173df07ece48a.json",
-					"name" : "Chip8Emu",
+					"id" : "Chip8-Dissasembler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chip8-Dissasembler-Debug-756e86d0907c330e2f70.json",
+					"name" : "Chip8-Dissasembler",
 					"projectIndex" : 0
 				}
 			]
@@ -50,7 +50,7 @@
 	"paths" : 
 	{
 		"build" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build",
-		"source" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
+		"source" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
 	},
 	"version" : 
 	{

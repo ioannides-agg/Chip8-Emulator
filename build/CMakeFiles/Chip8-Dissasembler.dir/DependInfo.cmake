@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Chip8_Disassembler.cpp" "CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o" "gcc" "CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o.d"
+  "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp" "CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o" "gcc" "CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

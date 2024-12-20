@@ -57,7 +57,7 @@ RM = /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8
+CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Chip8Emu
+# Target rules for targets named Chip8-Dissasembler
 
 # Build rule for target.
-Chip8Emu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Chip8Emu
-.PHONY : Chip8Emu
+Chip8-Dissasembler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Chip8-Dissasembler
+.PHONY : Chip8-Dissasembler
 
 # fast build rule for target.
-Chip8Emu/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/build
-.PHONY : Chip8Emu/fast
+Chip8-Dissasembler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/build
+.PHONY : Chip8-Dissasembler/fast
 
 Chip8_Disassembler.o: Chip8_Disassembler.cpp.o
 .PHONY : Chip8_Disassembler.o
 
 # target to build an object file
 Chip8_Disassembler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o
 .PHONY : Chip8_Disassembler.cpp.o
 
 Chip8_Disassembler.i: Chip8_Disassembler.cpp.i
@@ -142,7 +142,7 @@ Chip8_Disassembler.i: Chip8_Disassembler.cpp.i
 
 # target to preprocess a source file
 Chip8_Disassembler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.i
 .PHONY : Chip8_Disassembler.cpp.i
 
 Chip8_Disassembler.s: Chip8_Disassembler.cpp.s
@@ -150,7 +150,7 @@ Chip8_Disassembler.s: Chip8_Disassembler.cpp.s
 
 # target to generate assembly for a file
 Chip8_Disassembler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8Emu.dir/build.make CMakeFiles/Chip8Emu.dir/Chip8_Disassembler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.s
 .PHONY : Chip8_Disassembler.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Chip8Emu"
+	@echo "... Chip8-Dissasembler"
 	@echo "... Chip8_Disassembler.o"
 	@echo "... Chip8_Disassembler.i"
 	@echo "... Chip8_Disassembler.s"

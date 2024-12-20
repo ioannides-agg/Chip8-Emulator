@@ -72,5 +72,6 @@
         "text_encoding": "cpp",
         "thread": "cpp",
         "iomanip": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
 }

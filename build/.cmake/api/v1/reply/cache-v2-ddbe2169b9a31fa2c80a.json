@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14"
 		},
 		{
@@ -283,10 +283,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/opt/homebrew/bin/aarch64-apple-darwin24-gcc-14"
 		},
 		{
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
+			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -899,7 +899,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Chip8Emu"
+			"value" : "Chip8-Emulator"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1258,7 +1258,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Chip8Emu_BINARY_DIR",
+			"name" : "Chip8-Emulator_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1270,7 +1270,7 @@
 			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build"
 		},
 		{
-			"name" : "Chip8Emu_IS_TOP_LEVEL",
+			"name" : "Chip8-Emulator_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1282,7 +1282,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Chip8Emu_SOURCE_DIR",
+			"name" : "Chip8-Emulator_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1291,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
+			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
 		}
 	],
 	"kind" : "cache",

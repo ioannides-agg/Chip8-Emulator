@@ -24,7 +24,7 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
                 break;
 
                 default:
-                    std::cout << "UNKNOWN 0";
+                    std::cout << "-";
                 break;
             }
             /*uint8_t n = code[0] & 0x0f;
@@ -73,18 +73,38 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
 
         case 0x7:
         {
-            uint8_t reg = code0 & 0x0f; //pad the first byte.
+            uint8_t reg = (code0 & 0x0f); //pad the first byte.
             std::cout << "ADD " << "V" << (int)reg << ",#$" << std::setfill('0') << std::setw(2) << code1;
         }
         break;
 
         case 0x8:
-            std::cout << "8 not yet implemented";
+        {
+            uint8_t x = (code0 & 0x0f);
+            uint8_t y = (code1 >> 4);
+            uint8_t last_n = (code1 & 0x0f) >> 4;;
+            //TODO: IMPLEMENT 8xyn
+            switch (last_n)
+            {
+            case 0x0: std::cout << "LD " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x1: std::cout << "OR " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x2: std::cout << "AND " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x3: std::cout << "XOR " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x4: std::cout << "ADD " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x5: std::cout << "SUB " << "V" << (int)x << ",V" << (int)y; break;
+            case 0x6: std::cout << "SHR " << "V" << (int)x << "{,V" << (int)y << "}"; break;
+            case 0x7: std::cout << "SUBN " << "V" << (int)x << ",V" << (int)y; break;
+            case 0xe: std::cout << "SHL " << "V" << (int)x << "{,V" << (int)y << "}"; break;
+            
+            default:
+                break;
+            }
+        }
         break;
 
         case 0x9:
         {
-            uint8_t reg1 = code0 & 0x0f; //pad the first byte.
+            uint8_t reg1 = (code0 & 0x0f); //pad the first byte.
             uint8_t reg2 = code1 >> 4;
             std::cout << "SNE " << "V" << (int)reg1 << ",V" << (int)reg2;
         }
@@ -112,15 +132,39 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
         break;
 
         case 0xd:
-            std::cout << "d not yet implemented";
+        {
+            uint8_t x = (code0 & 0x0f);
+            uint8_t y = (code1 >> 4);
+            uint8_t last_n = (code1 & 0x0f) >> 4;
+            std::cout << "DRW " << "V" << (int)x << ",V" << (int)y << "," << (int)last_n;
+        }
         break;
 
         case 0xe:
-            std::cout << "e not yet implemented";
+        {
+            uint8_t x = (code0 & 0x0f);
+            switch(code1){
+                case 0x9E: std::cout << "SKP " << "V" << (int)x;
+                case 0xA1: std::cout << "SKNP " << "V" << (int)x;
+            }
+        }
         break;
 
         case 0xf:
-            std::cout << "f not yet implemented";
+        {
+            uint8_t x = (code0 & 0x0f);
+            switch(code1){
+                case 0x07: std::cout << "LD " << "V" << std::hex << (int)x << ",DT"; break;
+                case 0x0A: std::cout << "LD " << "V" << std::hex << (int)x << ",K"; break;
+                case 0x15: std::cout << "LD " << "DT" << ",V" << (int)x; break;
+                case 0x18: std::cout << "LD " << "ST" << ",V" << (int)x; break;
+                case 0x1E: std::cout << "ADD " << "I" << ",V" << (int)x; break;
+                case 0x29: std::cout << "LD " << "F" << ",V" << (int)x; break;
+                case 0x33: std::cout << "LD " << "B" << ",V" << (int)x; break;
+                case 0x55: std::cout << "LD " << "[I]" << ",V" << (int)x; break;
+                case 0x65: std::cout << "LD " << "V" << std::hex << (int)x << ",[I]"; break;
+            }
+        }
         break;
     }
 
@@ -129,7 +173,7 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
 
 int main() { 
     std::ifstream rom;
-    rom.open("roms/Fishie.ch8",std::ios::binary);
+    rom.open("../roms/ibm.ch8",std::ios::binary);
 
     if (rom.is_open()==false) {
 		std::cout << "Cannot open file\n";
