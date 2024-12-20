@@ -1,4 +1,4 @@
-#include "includes.h"
+#include "include.h"
 
 void Dissasembler(std::vector<char> &buffer, int pc) {
     char* code = &buffer[pc];
@@ -172,26 +172,13 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
 }
 
 int main() { 
-    std::ifstream rom;
-    rom.open("../roms/ibm.ch8",std::ios::binary);
+    std::vector<char> buffer;
 
-    if (rom.is_open()==false) {
-		std::cout << "Cannot open file\n";
-        return 1;
-	}
-
-	rom.seekg(0, std::ios::end);
-    int length = rom.tellg();
-    rom.seekg(0, std::ios::beg);
-
-    std::vector<char> buffer(length + 0x200);
-    rom.read(&buffer[0 + 0x200], length);
-
-    rom.close();
+    load_rom("../roms/ibm.ch8", buffer, 0x200);
     
     int pc = 0x200;
 
-    while( pc < (length + 0x200)) {
+    while( pc < buffer.size()) {
         Dissasembler(buffer, pc);
         pc += 2;
         std::cout << "\n";

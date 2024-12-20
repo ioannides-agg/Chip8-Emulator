@@ -9,10 +9,12 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_abort.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_printf.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types.h \
@@ -33,6 +35,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/libkern/_OSByteOrder.h \
@@ -117,7 +120,8 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/wctype.h \
-  /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/includes.h \
+  /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Libraries/rom_reader.h \
+  /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/include.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/atomic_word.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/basic_file.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++allocator.h \
@@ -133,15 +137,10 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/messages_members.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/os_defines.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/time_members.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/backward/auto_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/backward/binders.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bit \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/align.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/alloc_traits.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/allocated_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/allocator.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/atomic_base.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/atomic_lockfree_defines.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_ios.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_ios.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_string.h \
@@ -185,9 +184,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/range_access.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/refwrap.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/requires_hosted.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr_atomic.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr_base.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/sstream.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/std_abs.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_algobase.h \
@@ -198,20 +194,18 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_iterator_base_funcs.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_iterator_base_types.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_pair.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_raw_storage_iter.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_tempbuf.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/streambuf.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/streambuf_iterator.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/string_view.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stringfwd.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/unique_ptr.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/uses_allocator.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/uses_allocator_args.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/utility.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/vector.tcc \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/version.h \
+  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cassert \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cctype \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cerrno \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/clocale \
@@ -225,10 +219,8 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/debug/assertions.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/debug/debug.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/exception \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/aligned_buffer.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/alloc_traits.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/atomicity.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/concurrence.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/numeric_traits.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/string_conversions.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/type_traits.h \
@@ -240,14 +232,12 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/iostream \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/istream \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/locale \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/memory \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/new \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ostream \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/execution_defs.h \
-  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/glue_memory_defs.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/pstl_config.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/sstream \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/stdexcept \
+  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/stdlib.h \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/streambuf \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/string \
   /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/string_view \
@@ -270,17 +260,15 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/streambuf:
 
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/stdlib.h:
+
 /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin24/14/include-fixed/stdio.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/sstream:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/glue_memory_defs.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ostream:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/new:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/memory:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/istream:
 
@@ -296,8 +284,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/debug/assertions.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cwctype:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ctime:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cstdio:
@@ -308,7 +294,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cctype:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/execution_defs.h:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cassert:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/version.h:
 
@@ -322,17 +308,15 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/string_view.tcc:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/streambuf.tcc:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/locale_conv.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/sstream.tcc:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/refwrap.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/range_access.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/ostream_insert.h:
 
@@ -352,9 +336,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/locale_facets.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/locale_conv.h:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/locale_classes.tcc:
 
@@ -371,6 +353,8 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_ios.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/functional_hash.h:
+
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/include.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/functexcept.h:
 
@@ -400,10 +384,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_string.tcc:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/atomic_lockfree_defines.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/align.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/nested_exception.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/cxxabi_init_exception.h:
@@ -430,7 +410,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++locale.h:
 
-/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/includes.h:
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Libraries/rom_reader.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/debug/debug.h:
 
@@ -460,8 +440,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/char_traits.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/allocated_ptr.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_function.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_wchar_t.h:
@@ -486,9 +464,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_timeval.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/atomic_base.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_timespec.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_assert.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_ssize_t.h:
 
@@ -524,6 +500,10 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/memoryfwd.h:
 
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/cwctype:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/assert.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_mach_port_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/__endian.h:
@@ -535,8 +515,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/system_error:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/unique_ptr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_size_t.h:
 
@@ -610,6 +588,8 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_posix_availability.h:
 
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/streambuf.tcc:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/Availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/malloc/_malloc.h:
@@ -621,10 +601,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/pthread/pthread_impl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/malloc/_malloc_type.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/libkern/_OSByteOrder.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/concept_check.h:
 
@@ -644,13 +620,9 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/mach/arm/_structs.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/locale.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/string_conversions.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_pair.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/concurrence.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++config.h:
 
@@ -666,11 +638,13 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/ctype.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/libkern/_OSByteOrder.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/types.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/backward/auto_ptr.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/iostream:
 
@@ -679,8 +653,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/stdexcept:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/predefined_ops.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_raw_storage_iter.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++io.h:
 
@@ -694,21 +666,31 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/_endian.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_static_assert.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/machine/endian.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/errno.h:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/tuple:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_tempbuf.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_uint16_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_abort.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++allocator.h:
+
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/locale:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/wctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_wctrans_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/alloc_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/arm/_mcontext.h:
 
-/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/errno.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_wctype_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_abort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_ctype.h:
 
@@ -738,10 +720,6 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/signal.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++allocator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
-
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/initializer_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
@@ -750,11 +728,9 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_time.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/aligned_buffer.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_time_t.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/quoted_string.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr_base.h:
 
 /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/alloc_traits.h:
 
@@ -762,19 +738,15 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_uint8_t.h:
 
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/locale:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_wctrans_t.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/shared_ptr_atomic.h:
-
-/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/tuple:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_uint16_t.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_stdlib.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/locale.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_timespec.h:
+
+/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_types/_wctype_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityVersions.h:
 
@@ -783,5 +755,3 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioanni
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_pid_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/_locale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_time_t.h:

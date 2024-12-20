@@ -71,7 +71,8 @@
         "stop_token": "cpp",
         "text_encoding": "cpp",
         "thread": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "cassert": "cpp"
     },
     "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
 }
