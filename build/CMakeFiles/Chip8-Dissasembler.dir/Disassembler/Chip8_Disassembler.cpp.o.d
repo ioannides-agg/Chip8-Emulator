@@ -1,6 +1,6 @@
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: \
- /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp \
- /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/include.h \
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o: \
+ /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/Chip8_Disassembler.cpp \
+ /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/include.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/iostream \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/c++config.h \
@@ -228,7 +228,7 @@ CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_bvector.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/vector.tcc \
- /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/../Libraries/rom_reader.h \
+ /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/../Libraries/rom_reader.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/fstream \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/codecvt.h \
  /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin24/bits/basic_file.h \

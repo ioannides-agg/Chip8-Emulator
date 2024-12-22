@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "Chip8-Emulator",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Chip8-Dissasembler::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Chip8-Dissasembler-Debug-756e86d0907c330e2f70.json",
+					"jsonFile" : "target-Chip8-Dissasembler-Debug-a3d23477a0e1c0f13175.json",
 					"name" : "Chip8-Dissasembler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chip8-Interpreter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chip8-Interpreter-Debug-7055b2885817c6f7ca96.json",
+					"name" : "Chip8-Interpreter",
 					"projectIndex" : 0
 				}
 			]
@@ -50,7 +59,7 @@
 	"paths" : 
 	{
 		"build" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build",
-		"source" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
+		"source" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
 	},
 	"version" : 
 	{

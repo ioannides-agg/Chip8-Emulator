@@ -74,5 +74,5 @@
         "iomanip": "cpp",
         "cassert": "cpp"
     },
-    "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
+    "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
 }

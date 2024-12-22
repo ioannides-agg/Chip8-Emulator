@@ -57,7 +57,7 @@ RM = /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler
+CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build
@@ -129,29 +129,90 @@ Chip8-Dissasembler/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/build
 .PHONY : Chip8-Dissasembler/fast
 
-Chip8_Disassembler.o: Chip8_Disassembler.cpp.o
-.PHONY : Chip8_Disassembler.o
+#=============================================================================
+# Target rules for targets named Chip8-Interpreter
+
+# Build rule for target.
+Chip8-Interpreter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Chip8-Interpreter
+.PHONY : Chip8-Interpreter
+
+# fast build rule for target.
+Chip8-Interpreter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/build
+.PHONY : Chip8-Interpreter/fast
+
+Disassembler/Chip8_Disassembler.o: Disassembler/Chip8_Disassembler.cpp.o
+.PHONY : Disassembler/Chip8_Disassembler.o
 
 # target to build an object file
-Chip8_Disassembler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o
-.PHONY : Chip8_Disassembler.cpp.o
+Disassembler/Chip8_Disassembler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o
+.PHONY : Disassembler/Chip8_Disassembler.cpp.o
 
-Chip8_Disassembler.i: Chip8_Disassembler.cpp.i
-.PHONY : Chip8_Disassembler.i
+Disassembler/Chip8_Disassembler.i: Disassembler/Chip8_Disassembler.cpp.i
+.PHONY : Disassembler/Chip8_Disassembler.i
 
 # target to preprocess a source file
-Chip8_Disassembler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.i
-.PHONY : Chip8_Disassembler.cpp.i
+Disassembler/Chip8_Disassembler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.i
+.PHONY : Disassembler/Chip8_Disassembler.cpp.i
 
-Chip8_Disassembler.s: Chip8_Disassembler.cpp.s
-.PHONY : Chip8_Disassembler.s
+Disassembler/Chip8_Disassembler.s: Disassembler/Chip8_Disassembler.cpp.s
+.PHONY : Disassembler/Chip8_Disassembler.s
 
 # target to generate assembly for a file
-Chip8_Disassembler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.s
-.PHONY : Chip8_Disassembler.cpp.s
+Disassembler/Chip8_Disassembler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Dissasembler.dir/build.make CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.s
+.PHONY : Disassembler/Chip8_Disassembler.cpp.s
+
+Interpreter/Chip8/chip8.o: Interpreter/Chip8/chip8.cpp.o
+.PHONY : Interpreter/Chip8/chip8.o
+
+# target to build an object file
+Interpreter/Chip8/chip8.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/Chip8/chip8.cpp.o
+.PHONY : Interpreter/Chip8/chip8.cpp.o
+
+Interpreter/Chip8/chip8.i: Interpreter/Chip8/chip8.cpp.i
+.PHONY : Interpreter/Chip8/chip8.i
+
+# target to preprocess a source file
+Interpreter/Chip8/chip8.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/Chip8/chip8.cpp.i
+.PHONY : Interpreter/Chip8/chip8.cpp.i
+
+Interpreter/Chip8/chip8.s: Interpreter/Chip8/chip8.cpp.s
+.PHONY : Interpreter/Chip8/chip8.s
+
+# target to generate assembly for a file
+Interpreter/Chip8/chip8.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/Chip8/chip8.cpp.s
+.PHONY : Interpreter/Chip8/chip8.cpp.s
+
+Interpreter/main.o: Interpreter/main.cpp.o
+.PHONY : Interpreter/main.o
+
+# target to build an object file
+Interpreter/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/main.cpp.o
+.PHONY : Interpreter/main.cpp.o
+
+Interpreter/main.i: Interpreter/main.cpp.i
+.PHONY : Interpreter/main.i
+
+# target to preprocess a source file
+Interpreter/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/main.cpp.i
+.PHONY : Interpreter/main.cpp.i
+
+Interpreter/main.s: Interpreter/main.cpp.s
+.PHONY : Interpreter/main.s
+
+# target to generate assembly for a file
+Interpreter/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chip8-Interpreter.dir/build.make CMakeFiles/Chip8-Interpreter.dir/Interpreter/main.cpp.s
+.PHONY : Interpreter/main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +223,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Chip8-Dissasembler"
-	@echo "... Chip8_Disassembler.o"
-	@echo "... Chip8_Disassembler.i"
-	@echo "... Chip8_Disassembler.s"
+	@echo "... Chip8-Interpreter"
+	@echo "... Disassembler/Chip8_Disassembler.o"
+	@echo "... Disassembler/Chip8_Disassembler.i"
+	@echo "... Disassembler/Chip8_Disassembler.s"
+	@echo "... Interpreter/Chip8/chip8.o"
+	@echo "... Interpreter/Chip8/chip8.i"
+	@echo "... Interpreter/Chip8/chip8.s"
+	@echo "... Interpreter/main.o"
+	@echo "... Interpreter/main.i"
+	@echo "... Interpreter/main.s"
 .PHONY : help
 
 

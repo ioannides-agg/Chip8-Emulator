@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/opt/homebrew/bin/aarch64-apple-darwin24-g++-14"
 		},
 		{
@@ -283,10 +283,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/opt/homebrew/bin/aarch64-apple-darwin24-gcc-14"
 		},
 		{
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
+			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1291,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler"
+			"value" : "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
 		}
 	],
 	"kind" : "cache",

@@ -53,7 +53,7 @@ RM = /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler
+CMAKE_SOURCE_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build
@@ -69,28 +69,28 @@ include CMakeFiles/Chip8-Dissasembler.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Chip8-Dissasembler.dir/flags.make
 
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: CMakeFiles/Chip8-Dissasembler.dir/flags.make
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o: CMakeFiles/Chip8-Dissasembler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o -MF CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o.d -o CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o -c /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o: CMakeFiles/Chip8-Dissasembler.dir/flags.make
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o: /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/Chip8_Disassembler.cpp
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o: CMakeFiles/Chip8-Dissasembler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o -MF CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o.d -o CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o -c /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/Chip8_Disassembler.cpp
 
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp > CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.i
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.i"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/Chip8_Disassembler.cpp > CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.i
 
-CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler/Chip8_Disassembler.cpp -o CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.s
+CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.s"
+	/opt/homebrew/bin/aarch64-apple-darwin24-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Disassembler/Chip8_Disassembler.cpp -o CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.s
 
 # Object files for target Chip8-Dissasembler
 Chip8__Dissasembler_OBJECTS = \
-"CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o"
+"CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o"
 
 # External object files for target Chip8-Dissasembler
 Chip8__Dissasembler_EXTERNAL_OBJECTS =
 
-Chip8-Dissasembler: CMakeFiles/Chip8-Dissasembler.dir/Chip8_Disassembler.cpp.o
+Chip8-Dissasembler: CMakeFiles/Chip8-Dissasembler.dir/Disassembler/Chip8_Disassembler.cpp.o
 Chip8-Dissasembler: CMakeFiles/Chip8-Dissasembler.dir/build.make
 Chip8-Dissasembler: CMakeFiles/Chip8-Dissasembler.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Chip8-Dissasembler"
@@ -105,6 +105,6 @@ CMakeFiles/Chip8-Dissasembler.dir/clean:
 .PHONY : CMakeFiles/Chip8-Dissasembler.dir/clean
 
 CMakeFiles/Chip8-Dissasembler.dir/depend:
-	cd /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles/Chip8-Dissasembler.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8 /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8 /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/build/CMakeFiles/Chip8-Dissasembler.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Chip8-Dissasembler.dir/depend
 

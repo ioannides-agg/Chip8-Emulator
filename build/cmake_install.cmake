@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Dissasembler
+# Install script for directory: /Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

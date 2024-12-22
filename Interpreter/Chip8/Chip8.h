@@ -1,32 +1,97 @@
 #ifndef CHIP8_H
 #define CHIP8_H
 
-class chip8 {
+#include <iostream>
+#include <array>
+#include <vector>
+#include <cassert>
+#include <iomanip>
+
+class chip8_display {
     public:
-    chip8();
-    void process();
+    
+    void flip(int i, int j) {
+        display[i][j] != display[i][j];
+    }
 
     private:
-    chip8_memory memory;
-    std::vector<uint8_t> V; //reserve 16 slots
-    uint16_t I;
-    uint16_t PC;
+    std::array< std::array<bool, 64> , 32> display;
 };
 
 class chip8_memory {
     public:
-    chip8_memory() : memory(4096, 0) {};
 
-    void write(std::uint16_t address, std::uint8_t value) {
+    void write(uint16_t address, uint8_t value) {
         memory[address] = value;
     }
 
-    std::uint8_t read(std::uint16_t address) {
+    uint8_t read(uint16_t address) {
         return memory[address];
     }
 
+    uint8_t operator[](uint16_t i) const { return memory[i]; }
+    uint8_t& operator[](uint16_t i) { return memory[i]; }
+
     private:
-    std::vector<uint8_t> memory;
+    std::array<uint8_t, 4096> memory;
+};
+
+class chip8_stack {
+    public:
+    void push(uint16_t address) {
+        assert((int)SP < 16);
+        stack.push_back(address);
+        SP++;
+    }
+
+    uint16_t pop() {
+        assert(!stack.empty());
+        auto temp = stack[SP];
+        SP--;
+        stack.pop_back();
+        return temp;
+    }
+
+    uint8_t getSP() const {
+        return SP;
+    }
+
+    private:
+    std::vector<uint16_t> stack;
+    uint8_t SP;
+};
+
+class chip8 {
+    public:
+    chip8();
+    void decode();
+
+    private:
+    chip8_memory memory;
+    std::array<uint8_t, 16> V;
+    uint16_t I;
+    uint16_t PC = 0x200;
+    chip8_stack stack;
+    chip8_display display;
+
+    static constexpr std::array<uint8_t, 80> font = {
+        0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
+        0x20, 0x60, 0x20, 0x20, 0x70, // 1
+        0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
+        0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
+        0x90, 0x90, 0xF0, 0x10, 0x10, // 4
+        0xF0, 0x80, 0xF0, 0x10, 0xF0, // 5
+        0xF0, 0x80, 0xF0, 0x90, 0xF0, // 6
+        0xF0, 0x10, 0x20, 0x40, 0x40, // 7
+        0xF0, 0x90, 0xF0, 0x90, 0xF0, // 8
+        0xF0, 0x90, 0xF0, 0x10, 0xF0, // 9
+        0xF0, 0x90, 0xF0, 0x90, 0x90, // A
+        0xE0, 0x90, 0xE0, 0x90, 0xE0, // B
+        0xF0, 0x80, 0x80, 0x80, 0xF0, // C
+        0xE0, 0x90, 0x90, 0x90, 0xE0, // D
+        0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
+        0xF0, 0x80, 0xF0, 0x80, 0x80  // F
+    };
 };
 
 #endif

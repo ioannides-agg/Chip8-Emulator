@@ -174,7 +174,11 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
 int main() { 
     std::vector<char> buffer;
 
-    load_rom("../roms/ibm.ch8", buffer, 0x200);
+    std::string path;
+
+    std::cin >> path;
+
+    load_rom(path, buffer, 0x200);
     
     int pc = 0x200;
 
