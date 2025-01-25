@@ -14,7 +14,7 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
     switch(nibble) {
         case 0x0: 
         {
-            switch((int)(uint8_t)code[1]) {
+            switch(code1) {
                 case 0xE0: //Clear the display.
                     std::cout << "CLS";
                 break;
@@ -178,7 +178,7 @@ int main() {
 
     std::cin >> path;
 
-    load_rom(path, buffer, 0x200);
+    rr::load_rom(path, buffer, 0x200);
     
     int pc = 0x200;
 

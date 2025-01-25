@@ -14,6 +14,14 @@ class chip8_display {
         display[i][j] != display[i][j];
     }
 
+    void clear() {
+        for (size_t i = 0; i < 64; i++)
+        {
+            /* code */
+        }
+        
+    }
+
     private:
     std::array< std::array<bool, 64> , 32> display;
 };
@@ -64,15 +72,29 @@ class chip8_stack {
 class chip8 {
     public:
     chip8();
-    void decode();
+    void decode(uint16_t _pc);
+
+    void load(std::vector<char> &buffer);
+
+    uint16_t fetch() {
+        uint16_t temp = PC;
+        PC++;
+        return temp;
+    }
+
+    void point(uint16_t address) {
+        PC = address;
+    }
 
     private:
     chip8_memory memory;
     std::array<uint8_t, 16> V;
     uint16_t I;
-    uint16_t PC = 0x200;
     chip8_stack stack;
     chip8_display display;
+
+    protected:
+    uint16_t PC = 0x200;
 
     static constexpr std::array<uint8_t, 80> font = {
         0xF0, 0x90, 0x90, 0x90, 0xF0, // 0

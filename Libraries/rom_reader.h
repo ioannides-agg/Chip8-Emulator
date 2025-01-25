@@ -7,38 +7,41 @@
 #include <iomanip>
 #include <cassert>
 
-void load_rom(std::string filepath, std::vector<char> &buffer) {
-    std::ifstream rom;
-    rom.open(filepath, std::ios::binary);
+namespace rr {
 
-    auto open = rom.is_open();
-    assert(open == true);
+    void load_rom(std::string filepath, std::vector<char> &buffer) {
+        std::ifstream rom;
+        rom.open(filepath, std::ios::binary);
 
-	rom.seekg(0, std::ios::end);
-    int length = rom.tellg();
-    rom.seekg(0, std::ios::beg);
+        auto open = rom.is_open();
+        assert(open == true);
 
-    buffer.resize(length);
-    rom.read(&buffer[0 + 0x200], length);
+        rom.seekg(0, std::ios::end);
+        int length = rom.tellg();
+        rom.seekg(0, std::ios::beg);
 
-    rom.close();
-}
+        buffer.resize(length);
+        rom.read(&buffer[0], length);
 
-void load_rom(std::string filepath, std::vector<char> &buffer, int surplus) {
-    std::ifstream rom;
-    rom.open(filepath, std::ios::binary);
+        rom.close();
+    }
 
-    auto open = rom.is_open();
-    assert(open == true);
+    void load_rom(std::string filepath, std::vector<char> &buffer, int surplus) {
+        std::ifstream rom;
+        rom.open(filepath, std::ios::binary);
 
-	rom.seekg(0, std::ios::end);
-    int length = rom.tellg();
-    rom.seekg(0, std::ios::beg);
+        auto open = rom.is_open();
+        assert(open == true);
 
-    buffer.resize(surplus + length);
-    rom.read(&buffer[0 + surplus], length);
+        rom.seekg(0, std::ios::end);
+        int length = rom.tellg();
+        rom.seekg(0, std::ios::beg);
 
-    rom.close();
+        buffer.resize(surplus + length);
+        rom.read(&buffer[0 + surplus], length);
+
+        rom.close();
+    }
 }
 
 #endif
