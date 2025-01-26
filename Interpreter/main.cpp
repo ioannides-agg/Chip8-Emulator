@@ -8,13 +8,10 @@ int main() {
     std::cin >> path;
     rr::load_rom(path, buffer);
 
-    chip8 interpreter;
-
-    uint16_t current_PC = interpreter.fetch();
-
-    while(current_PC <= buffer.size() + 0x200) {
-        current_PC = interpreter.fetch();
-        //interpreter.decode(current_PC);
+    chip8 interpreter(buffer);
+    while(interpreter.getPC() <= buffer.size() + 0x200) {
+        uint8_t* instruction = interpreter.fetch();
+        interpreter.decode(instruction);
     }
 
 }

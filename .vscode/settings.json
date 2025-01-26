@@ -72,7 +72,11 @@
         "text_encoding": "cpp",
         "thread": "cpp",
         "iomanip": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "__hash_table": "cpp",
+        "__node_handle": "cpp",
+        "deque": "cpp",
+        "execution": "cpp"
     },
-    "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8"
+    "cmake.sourceDirectory": "/Users/aggelosioannidhs/Desktop/Work/Personal/Emulators/Chip-8/Interpreter"
 }

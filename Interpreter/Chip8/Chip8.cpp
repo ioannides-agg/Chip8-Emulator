@@ -1,40 +1,47 @@
 #include "Chip8.h"
 
-chip8::chip8() {
-    point(0x50);
+constexpr uint16_t FONT_START_ADDRESS = 0x50;
+
+chip8::chip8(std::vector<char> &buffer) {
+    PC = FONT_START_ADDRESS;
     for (size_t i = 0; i <= font.size(); i++)
     {
-        //std::cout << std::setfill('0') <<std::setw(3) << std::hex << (int)PC << "\n";
         memory.write(PC, font[i]);
-        fetch();
+        PC++;
     }
+
+    load(buffer);
 }
 
 void chip8::load(std::vector<char> &buffer) {
-    point(0x200);
+    PC = 0x200;
 
     for (size_t i = 0; i <= buffer.size(); i++)
     {
         memory.write(PC, buffer[i]);
-        fetch();
+        PC++;
     }
+
+    PC = 0x200;
 }
 
-void chip8::decode(uint16_t address) {
-    uint8_t* code = &memory[address];
+void chip8::decode(uint8_t* code) {
     int code0 = (int)code[0];
     int code1 = (int)code[1];
 
     int nibble = (uint8_t)code[0] >> 4;
+    //std::cout << code << "\n";
 
-    switch (nibble)
+    /*switch (nibble)
     {
         case 0x0: 
         {
             
         }
         break;
-    }
+    }*/
+
+   PC++;
 }
 /*
 void Dissasembler(std::vector<char> &buffer, int pc) {

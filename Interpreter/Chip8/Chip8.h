@@ -71,19 +71,17 @@ class chip8_stack {
 
 class chip8 {
     public:
-    chip8();
-    void decode(uint16_t _pc);
+    chip8(std::vector<char> &buffer);
+    void decode(uint8_t* code);
 
     void load(std::vector<char> &buffer);
 
-    uint16_t fetch() {
-        uint16_t temp = PC;
-        PC++;
-        return temp;
+    uint8_t* fetch() {
+        return &memory[PC];
     }
 
-    void point(uint16_t address) {
-        PC = address;
+    uint16_t getPC() const {
+        return PC;
     }
 
     private:
