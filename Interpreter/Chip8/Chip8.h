@@ -11,7 +11,7 @@ class chip8_display {
     public:
     
     void flip(int i, int j) {
-        display[i][j] != display[i][j];
+        display[i][j] = !display[i][j];
     }
 
     void clear() {
