@@ -2,7 +2,7 @@ add_executable(Interpreter)
 
 target_sources(Interpreter PRIVATE
     main.cpp
-    Chip8/chip8.cpp
+    Chip8/Chip8.cpp
 )
 
 target_include_directories(Interpreter PRIVATE)
