@@ -60,7 +60,7 @@ int main() {
         { // RENDER LOOP
             const chip8_display &screen = interpreter.getDisplay();
             for (int y = 0; y < 32; y++) {
-                for (int x = 0; y < 64; x++) {
+                for (int x = 0; x < 64; x++) {
                     if (screen.get(x, y)) {
                         renderer.render(x, y);
                     }
