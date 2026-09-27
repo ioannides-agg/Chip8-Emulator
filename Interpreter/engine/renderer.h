@@ -6,7 +6,7 @@
 
 class Renderer {
 public:
-    Renderer(SDL_Window *win, DisplaySettings settings = DisplaySettings{1}) : settings(settings) {
+    Renderer(SDL_Window *win, DisplaySettings settings = DisplaySettings{10}) : settings(settings) {
         rend = SDL_CreateRenderer(win, 0);
         if (rend == NULL) {
             SDL_Log("Could not create renderer: %s", SDL_GetError());

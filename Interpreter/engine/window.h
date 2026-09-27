@@ -6,7 +6,7 @@
 
 class Window {
 public:
-    Window(const char *window_name, DisplaySettings settings = DisplaySettings{1}) {
+    Window(const char *window_name, DisplaySettings settings = DisplaySettings{10}) {
         win = SDL_CreateWindow(window_name, settings.width(), settings.height(), 0);
         if (win == NULL) {
             SDL_Log("Could not create window: %s", SDL_GetError());
