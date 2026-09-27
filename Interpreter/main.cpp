@@ -34,6 +34,10 @@ int main() {
     constexpr int instructions_per_frame = 10;
     bool running = true;
 
+    //games move sprites by erasing and redrawing them, so a frame can land in between and show them missing.
+    //drawing pixels that were lit last frame too hides that 1 frame gap, like the slow fade of old CRT screens.
+    chip8_display previous_screen;
+
     while(running) {
         { // EVENT LOOP
             SDL_Event event;
@@ -79,11 +83,12 @@ int main() {
             const chip8_display &screen = interpreter.getDisplay();
             for (int y = 0; y < 32; y++) {
                 for (int x = 0; x < 64; x++) {
-                    if (screen.get(x, y)) {
+                    if (screen.get(x, y) || previous_screen.get(x, y)) {
                         renderer.render(x, y);
                     }
                 }
             }
+            previous_screen = screen;
             renderer.refresh();
         }
 
