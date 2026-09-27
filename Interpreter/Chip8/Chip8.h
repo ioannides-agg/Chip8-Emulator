@@ -1,11 +1,9 @@
 #ifndef CHIP8_H
 #define CHIP8_H
 
-#include <iostream>
 #include <array>
 #include <vector>
-#include <cassert>
-#include <iomanip>
+#include <stdexcept>
 
 class chip8_display {
     public:
@@ -43,32 +41,29 @@ class chip8_memory {
     uint8_t& operator[](uint16_t i) { return memory[i]; }
 
     private:
-    std::array<uint8_t, 4096> memory;
+    std::array<uint8_t, 4096> memory{};
 };
 
 class chip8_stack {
     public:
     void push(uint16_t address) {
-        assert((int)SP < 16);
+        if (stack.size() >= 16) {
+            throw std::runtime_error("Stack overflow: more than 16 nested CALLs");
+        }
         stack.push_back(address);
-        SP++;
     }
 
     uint16_t pop() {
-        assert(!stack.empty());
-        auto temp = stack[SP];
-        SP--;
+        if (stack.empty()) {
+            throw std::runtime_error("Stack underflow: RET with no matching CALL");
+        }
+        uint16_t temp = stack.back();
         stack.pop_back();
         return temp;
     }
 
-    uint8_t getSP() const {
-        return SP;
-    }
-
     private:
-    std::vector<uint16_t> stack;
-    uint8_t SP;
+    std::vector<uint16_t> stack{};
 };
 
 class chip8 {
@@ -113,9 +108,9 @@ class chip8 {
     const chip8_display &getDisplay() const { return display; }
 
     private:
+    std::array<uint8_t, 16> V{};
+    uint16_t I{};
     chip8_memory memory;
-    std::array<uint8_t, 16> V;
-    uint16_t I;
     chip8_stack stack;
     chip8_display display;
 
