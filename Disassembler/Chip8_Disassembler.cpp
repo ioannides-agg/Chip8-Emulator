@@ -179,6 +179,7 @@ int main() {
 
     std::string path;
 
+    std::cout << "Select rom: " << "\n";
     std::cin >> path;
 
     rr::load_rom(path, buffer, 0x200);
