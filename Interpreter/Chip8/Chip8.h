@@ -4,6 +4,8 @@
 #include <array>
 #include <vector>
 #include <stdexcept>
+#include <cstdint>
+#include <random>
 
 class chip8_display {
     public:
@@ -66,6 +68,20 @@ class chip8_stack {
     std::vector<uint16_t> stack{};
 };
 
+class chip8_keypad {
+    public:
+    void set(uint8_t key, bool pressed) {
+        keys[key & 0x0F] = pressed;
+    }
+
+    bool isPressed(uint8_t key) const {
+        return keys[key & 0x0F];
+    }
+
+    private:
+    std::array<bool, 16> keys{};
+};
+
 class chip8 {
     public:
     chip8(std::vector<char> &buffer) {
@@ -107,12 +123,33 @@ class chip8 {
 
     const chip8_display &getDisplay() const { return display; }
 
+    void tickTimers() {
+        if (delay_timer > 0) delay_timer--;
+        if (sound_timer > 0) sound_timer--;
+    }
+
+    bool isSoundPlaying() const {
+        return sound_timer > 0;
+    }
+
+    void setKey(uint8_t key, bool pressed) {
+        keypad.set(key, pressed);
+    }
+
     private:
     std::array<uint8_t, 16> V{};
     uint16_t I{};
+    uint8_t delay_timer{};
+    uint8_t sound_timer{};
     chip8_memory memory;
     chip8_stack stack;
     chip8_display display;
+    chip8_keypad keypad;
+    std::mt19937 rng{std::random_device{}()};
+
+    uint8_t randomByte() {
+        return std::uniform_int_distribution<int>(0, 255)(rng);
+    }
 
     protected:
     uint16_t PC = 0x200;
