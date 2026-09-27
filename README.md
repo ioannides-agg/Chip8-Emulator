@@ -3,7 +3,7 @@ a chip8 emulator implemented using c++.
 
 The repo contains two programs:
 
-- **Interpreter**: the emulator itself, using [SDL3](https://www.libsdl.org/) for the window and input. This is still a work in progress: it loads a ROM into memory, but it doesn't run instructions or open a window yet.
+- **Interpreter**: the emulator itself, using [SDL3](https://www.libsdl.org/) for the window, input and sound. It implements all 35 original CHIP-8 instructions.
 - **Disassembler**: prints a ROM as CHIP-8 assembly.
 
 ## Requirements
@@ -79,4 +79,16 @@ Each line shows the address, the two bytes of the opcode and the decoded instruc
 ./build/Interpreter/Interpreter
 ```
 
-When it prints `Select rom:`, type the path to a ROM (for example `roms/ibm.ch8`) and press Enter.
+When it prints `Select rom:`, type the path to a ROM (for example `roms/ibm.ch8`) and press Enter. The game opens in a new window.
+
+The CHIP-8 has a 16-key hex keypad, which is mapped to the left side of your keyboard:
+
+```
+Keyboard        CHIP-8
+1 2 3 4         1 2 3 C
+Q W E R         4 5 6 D
+A S D F         7 8 9 E
+Z X C V         A 0 B F
+```
+
+Press Escape or close the window to quit.
