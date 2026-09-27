@@ -5,6 +5,7 @@
 #include "SDL3/SDL_events.h"
 #include "engine/renderer.h"
 #include "engine/window.h"
+#include "engine/settings.h"
 #include "SDL3/SDL.h"
 #include "SDL3/SDL_main.h"
 
@@ -23,20 +24,14 @@ int main() {
     rr::load_rom(path, buffer);
 
     chip8 interpreter(buffer);
-    while(interpreter.getPC() <= buffer.size() + 0x200) {
-        uint16_t opcode = interpreter.fetch();
-        interpreter.decode(opcode);
-    }
+    DisplaySettings settings(10);
+    Window window("Chip-8 Emulator", settings);
+    Renderer renderer(window.getWindow(), settings);
 
-    Window window("Chip-8 Emulator");
-    Renderer renderer(window.getWindow());
+    constexpr int instructions_per_frame = 10;
     bool running = true;
 
     while(running) {
-        { // RENDER LOOP
-            renderer.refresh();
-        }
-
         { // EVENT LOOP
             SDL_Event event;
 
@@ -54,6 +49,27 @@ int main() {
                 }
             }
         }
+
+        { // CPU
+            for (int i = 0; i < instructions_per_frame; i++) {
+                uint16_t opcode = interpreter.fetch();
+                interpreter.decode(opcode);
+            }
+        }
+
+        { // RENDER LOOP
+            const chip8_display &screen = interpreter.getDisplay();
+            for (int y = 0; y < 32; y++) {
+                for (int x = 0; y < 64; x++) {
+                    if (screen.get(x, y)) {
+                        renderer.render(x, y);
+                    }
+                }
+            }
+            renderer.refresh();
+        }
+
+        SDL_Delay(16);
     }
 
 }
