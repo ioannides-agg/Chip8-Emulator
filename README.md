@@ -70,7 +70,7 @@ Each line shows the address, the two bytes of the opcode and the decoded instruc
 202 a2 2a LD I,#$22a
 204 60 0c LD V0,#$0c
 206 61 08 LD V1,#$08
-208 d0 1f DRW V0,V1,0
+208 d0 1f DRW V0,V1,f
 ```
 
 ### Interpreter

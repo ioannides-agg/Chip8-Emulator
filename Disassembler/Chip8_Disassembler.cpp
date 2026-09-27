@@ -12,7 +12,7 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
     int code1 = (int)(uint8_t)code[1];
 
     switch(nibble) {
-        case 0x0: 
+        case 0x0:
         {
             switch(code1) {
                 case 0xE0: //Clear the display.
@@ -82,8 +82,8 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
         {
             uint8_t x = (code0 & 0x0f);
             uint8_t y = (code1 >> 4);
-            uint8_t last_n = (code1 & 0x0f) >> 4;;
-            //TODO: IMPLEMENT 8xyn
+            uint8_t last_n = (code1 & 0x0f);
+
             switch (last_n)
             {
             case 0x0: std::cout << "LD " << "V" << (int)x << ",V" << (int)y; break;
@@ -95,9 +95,8 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
             case 0x6: std::cout << "SHR " << "V" << (int)x << "{,V" << (int)y << "}"; break;
             case 0x7: std::cout << "SUBN " << "V" << (int)x << ",V" << (int)y; break;
             case 0xe: std::cout << "SHL " << "V" << (int)x << "{,V" << (int)y << "}"; break;
-            
-            default:
-                break;
+
+            default: std::cout << "-"; break;
             }
         }
         break;
@@ -112,8 +111,8 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
 
         case 0xa: //Annn - LD I, addr, Set I = nnn.
         {
-            uint8_t addressI = code[0] & 0x0f;
-            std::cout << "LD " << "I,#$" << (int)addressI << code1;
+            uint16_t nnn = (code0&0x0f) << 8 | code1;
+            std::cout << "LD " << "I,#$" << nnn;
         }
          break;
 
@@ -135,7 +134,7 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
         {
             uint8_t x = (code0 & 0x0f);
             uint8_t y = (code1 >> 4);
-            uint8_t last_n = (code1 & 0x0f) >> 4;
+            uint8_t last_n = (code1 & 0x0f);
             std::cout << "DRW " << "V" << (int)x << ",V" << (int)y << "," << (int)last_n;
         }
         break;
@@ -144,8 +143,10 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
         {
             uint8_t x = (code0 & 0x0f);
             switch(code1){
-                case 0x9E: std::cout << "SKP " << "V" << (int)x;
-                case 0xA1: std::cout << "SKNP " << "V" << (int)x;
+                case 0x9E: std::cout << "SKP " << "V" << (int)x; break;
+                case 0xA1: std::cout << "SKNP " << "V" << (int)x; break;
+
+                default: std::cout << "-"; break;
             }
         }
         break;
@@ -163,15 +164,17 @@ void Dissasembler(std::vector<char> &buffer, int pc) {
                 case 0x33: std::cout << "LD " << "B" << ",V" << (int)x; break;
                 case 0x55: std::cout << "LD " << "[I]" << ",V" << (int)x; break;
                 case 0x65: std::cout << "LD " << "V" << std::hex << (int)x << ",[I]"; break;
+
+                default: std::cout << "-"; break;
             }
         }
         break;
     }
 
-    
+
 }
 
-int main() { 
+int main() {
     std::vector<char> buffer;
 
     std::string path;
@@ -179,10 +182,10 @@ int main() {
     std::cin >> path;
 
     rr::load_rom(path, buffer, 0x200);
-    
+
     int pc = 0x200;
 
-    while( pc < buffer.size()) {
+    while( pc + 1 < buffer.size()) {
         Dissasembler(buffer, pc);
         pc += 2;
         std::cout << "\n";
