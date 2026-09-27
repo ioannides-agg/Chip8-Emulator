@@ -9,21 +9,23 @@
 
 class chip8_display {
     public:
-    
-    void flip(int i, int j) {
-        display[i][j] = !display[i][j];
+
+    bool flip(int x, int y) {
+        bool was_on = display[y][x];
+        display[y][x] = !display[y][x];
+        return was_on;
     }
 
     void clear() {
-        for (size_t i = 0; i < 64; i++)
-        {
-            /* code */
+        for (auto &row : display) {
+            row.fill(false);
         }
-        
     }
 
+    bool get(int x, int y) const { return display[y][x]; }
+
     private:
-    std::array< std::array<bool, 64> , 32> display;
+    std::array< std::array<bool, 64> , 32> display{};
 };
 
 class chip8_memory {
@@ -71,18 +73,44 @@ class chip8_stack {
 
 class chip8 {
     public:
-    chip8(std::vector<char> &buffer);
-    void decode(uint8_t* code);
+    chip8(std::vector<char> &buffer) {
+        PC = FONT_START_ADDRESS;
+        for (size_t i = 0; i < font.size(); i++)
+        {
+            memory.write(PC, font[i]);
+            PC++;
+        }
 
-    void load(std::vector<char> &buffer);
+        load(buffer);
+    }
 
-    uint8_t* fetch() {
-        return &memory[PC];
+    void load(std::vector<char> &buffer) {
+        PC = 0x200;
+
+        for (size_t i = 0; i < buffer.size(); i++)
+        {
+            memory.write(PC, buffer[i]);
+            PC++;
+        }
+
+        PC = 0x200;
+    }
+
+    void decode(uint16_t opcode) {
+        //TODO
+    }
+
+    uint16_t fetch() {
+        uint16_t opcode = memory[PC] << 8 | memory[PC + 1];
+        PC += 2;
+        return opcode;
     }
 
     uint16_t getPC() const {
         return PC;
     }
+
+    const chip8_display &getDisplay() const { return display; }
 
     private:
     chip8_memory memory;
@@ -93,6 +121,8 @@ class chip8 {
 
     protected:
     uint16_t PC = 0x200;
+
+    static constexpr uint16_t FONT_START_ADDRESS = 0x50;
 
     static constexpr std::array<uint8_t, 80> font = {
         0xF0, 0x90, 0x90, 0x90, 0xF0, // 0

@@ -1,4 +1,6 @@
-#include "include.h"
+#include <iostream>
+#include <vector>
+#include "../Libraries/rom_reader.h"
 
 void Dissasembler(std::vector<char> &buffer, int pc) {
     char* code = &buffer[pc];
